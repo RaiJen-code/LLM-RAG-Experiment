@@ -1,0 +1,61 @@
+{
+  "reference_answers": {
+    "simple": {
+      "What is the main function of a resistor in an electronic circuit?": "A resistor limits or controls the flow of electrical current in a circuit. It reduces voltage and current according to Ohm's Law.",
+      
+      "Name three examples of sensors commonly used with Arduino microcontrollers.": "Common Arduino sensors include DHT11 temperature sensor, HC-SR04 ultrasonic distance sensor, and PIR motion sensor.",
+      
+      "What does LED stand for, and how do you safely connect it to a voltage source?": "LED stands for Light Emitting Diode. Always use a current-limiting resistor in series to prevent excessive current damage.",
+      
+      "What is the basic difference between Voltage and Current?": "Voltage is electrical pressure (measured in Volts) that pushes electrons. Current is the actual flow of electrons (measured in Amperes).",
+      
+      "Which microcontroller is more commonly used by beginners, Arduino Uno or ESP32? Give one reason.": "Arduino Uno is more common for beginners because it has simpler programming and extensive community support."
+    },
+    
+    "complex": {
+      "Conceptually explain how Pulse Width Modulation (PWM) technique can be used to adjust LED brightness or DC motor speed. What is the relationship between duty cycle and the resulting output?": "PWM rapidly switches output ON and OFF. The duty cycle (percentage of ON time) controls average power delivered. Higher duty cycle means brighter LED or faster motor.",
+      
+      "In the context of serial communication between a microcontroller and a computer, what are the fundamental differences between the UART and I2C protocols in terms of connection topology, number of wires, and speed?": "UART uses point-to-point connection with 2 wires (TX, RX) at speeds up to 115200 baud. I2C uses bus topology with 2 wires (SDA, SCL) supporting multiple devices at 100-400 kHz.",
+      
+      "A circuit uses a linear regulator LM7805 to step down voltage from 12V to 5V. If the load draws 500mA of current, calculate the approximate power dissipated as heat in the regulator. Why is a switching regulator (like LM2596) more efficient for this case?": "Power dissipated = (12V - 5V) × 0.5A = 3.5W as heat. Switching regulators are more efficient (80-95%) because they use switching instead of linear voltage drop.",
+      
+      "You want to read an analog voltage from a potentiometer using an Arduino. Describe the process flow from the voltage at the analog pin until it becomes a digital value (ADC), including the concept of resolution (e.g., 10-bit).": "The ADC samples the analog voltage and converts it to a digital value. With 10-bit resolution, it divides 0-5V into 1024 levels, giving values from 0-1023.",
+      
+      "What is meant by Interrupt in microcontroller programming? Provide a practical example where using an interrupt is more effective than polling when reading input from a button.": "An interrupt temporarily halts program execution to handle urgent tasks. For buttons, interrupts respond immediately to presses without constantly checking, saving CPU cycles."
+    },
+    
+    "true_false_basic": {
+      "Capacitors can store electric charge and are often used to smooth out voltage ripples. True or False?": "True. Capacitors store charge and filter voltage ripples in power supplies.",
+      
+      "An NPN transistor turns ON when the base voltage is lower than the emitter voltage. True or False?": "False. NPN transistors turn ON when base voltage is higher than emitter by approximately 0.7V.",
+      
+      "Digital pins on a microcontroller can only output HIGH (5V) or LOW (0V). True or False?": "True. Digital pins operate in binary states, either HIGH or LOW voltage.",
+      
+      "Ohm's Law states that Current (I) is directly proportional to Voltage (V) and inversely proportional to Resistance (R), formulated as I = V x R. True or False?": "False. The correct formula is I = V / R (current equals voltage divided by resistance).",
+      
+      "The higher the resistor value connected in series with an LED, the dimmer the LED will glow. True or False?": "True. Higher resistance reduces current flow, resulting in dimmer LED brightness."
+    },
+    
+    "true_false_advanced": {
+      "The ESP32 platform from Espressif not only has WiFi and Bluetooth capabilities but also supports programming with MicroPython and Rust, in addition to the Arduino IDE. True or False?": "True. ESP32 supports Arduino IDE, MicroPython, and Rust programming frameworks.",
+      
+      "In modern IoT development, the MQTT protocol has completely replaced HTTP for device-to-cloud communication due to its much higher speed. True or False?": "False. Both MQTT and HTTP are used in IoT. MQTT's advantage is lower overhead and efficiency, not necessarily higher speed.",
+      
+      "To connect external sensors or modules to a microcontroller, breakout boards are often used because they already include the necessary support components, making prototyping easier. True or False?": "True. Breakout boards include pull-up resistors and voltage regulators, simplifying connections.",
+      
+      "Single Board Computers like the Raspberry Pi typically run a full operating system like Linux, while microcontrollers like Arduino run only one program uploaded directly to their memory. True or False?": "True. Raspberry Pi runs complete operating systems while Arduino executes a single program from flash memory.",
+      
+      "In the microcontroller world, LoRa wireless communication is very popular for long-range IoT projects because its range can reach several kilometers with low power consumption. True or False?": "True. LoRa achieves ranges of 2-15 kilometers with low power consumption, ideal for long-range IoT."
+    }
+  },
+  
+  "metadata": {
+    "format": "simple_reference_answers",
+    "answer_length": "1-3 sentences per answer",
+    "purpose": "Ground truth for ROUGE, BLEU, and semantic similarity evaluation",
+    "total_questions": 20,
+    "categories": ["simple", "complex", "true_false_basic", "true_false_advanced"],
+    "created": "2025-01-16",
+    "language": "English"
+  }
+}
